@@ -1,0 +1,330 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #222;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: #FFCC00;
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FFCC00;
+    margin: 4px 0;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links.active {
+    display: block;
+    position: absolute;
+    background-color: #222;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links li a {
+    color: #FFCC00;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-color: #FFCC00;
+    color: #000;
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #000;
+    color: #FFCC00;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #444;
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Services Section */
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service {
+    background-color: #222;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    color: #FFCC00;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Apps Section */
+.app-container, .game-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.app, .game {
+    background-color: #222;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.app img, .game img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.app-buttons, .game-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #FFCC00;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.download-btn {
+    background-color: #000;
+    color: #FFCC00;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+footer .footer-logo h1 {
+    color: #FFCC00;
+    margin-bottom: 20px;
+}
+
+footer .footer-social {
+    margin-bottom: 20px;
+}
+
+footer .footer-social a {
+    color: #FFCC00;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .footer-social a:hover {
+    color: #fff;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .service-container, .app-container, .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service, .app, .game {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Team Page Styles */
+#team {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFCC00;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: #222;
+    width: 23%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.8rem;
+    color: #FFCC00;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .team-member {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team-member {
+        width: 100%;
+    }
+}
